@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Bookstore</title>
+    <link rel="icon" href="images/hii.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="top-frame">
+        <div class="logo-section">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor"
+                        d="M21,5c-1.11-0.35-2.33-0.5-3.5-0.5c-1.95,0-4.05,0.4-5.5,1.5c-1.45-1.1-3.55-1.5-5.5-1.5S2.45,4.9,1,6v14.65 c0,0.25,0.25,0.5,0.5,0.5c0.1,0,0.15-0.05,0.25-0.05C3.1,20.45,5.05,20,6.5,20c1.95,0,4.05,0.4,5.5,1.5c1.35-0.85,3.8-1.5,5.5-1.5 c1.65,0,3.35,0.3,4.75,1.05c0.1,0.05,0.15,0.05,0.25,0.05c0.25,0,0.5-0.25,0.5-0.5V6C22.4,5.55,21.75,5.25,21,5z M3,18.5V7 c1.1-0.35,2.3-0.5,3.5-0.5c1.34,0,3.13,0.41,4.5,0.99v11.5C9.63,18.41,7.84,18,6.5,18C5.3,18,4.1,18.15,3,18.5z M21,18.5 c-1.1-0.35-2.3-0.5-3.5-0.5c-1.34,0-3.13,0.41-4.5,0.99V7.49c1.37-0.59,3.16-0.99,4.5-0.99c1.2,0,2.4,0.15,3.5,0.5V18.5z" />
+                </svg>
+            </div>
+            <div class="site-name">College Bookstore</div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="registration.html" class="nav-link">Registration</a>
+            <a href="catalogue.html" class="nav-link">Catalogue</a>
+            <a href="cart.html" class="nav-link">Cart</a>
+        </nav>
+    </div>
+
+    <div class="content-wrapper">
+        <aside class="left-frame">
+            <h3>Departments</h3>
+            <ul class="department-list">
+                <li onclick="loadContent('CSE')" class="department-item">
+                    Computer Science
+                </li>
+                <li onclick="loadContent('ECE')" class="department-item">
+                    Electronics
+                </li>
+                <li onclick="loadContent('EEE')" class="department-item">
+                    Electrical
+                </li>
+                <li onclick="loadContent('CIVIL')" class="department-item">Civil</li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="mainContent">
+            <div class="welcome-section">
+                <h1>Welcome to College Bookstore</h1>
+                <p class="welcome-text">
+                    Your one-stop destination for academic excellence. Browse through
+                    our comprehensive collection of textbooks, reference materials, and
+                    academic resources. Whether you're looking for the latest editions
+                    or classic texts, we have everything you need to succeed in your
+                    studies. Our user-friendly interface makes it easy to find what
+                    you're looking for, and our competitive prices ensure you get the
+                    best value for your money.
+                </p>
+            </div>
+
+            <div class="featured-books-section">
+                <h2>Featured Books</h2>
+                <div class="books-grid">
+                    <div class="book-card">
+                        <img src="images/f1.jpg" alt="Featured Book 1" class="book-image" />
+                        <h3>The Coming Wave</h3>
+                        <p>Author: Mustafa Suleyman</p>
+                        <p>Price: 899/-</p>
+                        <button onclick="alert('Added to cart!')">Add to Cart</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/f2.jpg" alt="Featured Book 2" class="book-image" />
+                        <h3>Algorithms</h3>
+                        <p>Author: Albert Rutherford</p>
+                        <p>Price: 3999/-</p>
+                        <button onclick="alert('Added to cart!')">Add to Cart</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/f3.jpg" alt="Featured Book 3" class="book-image" />
+                        <h3>Forbidden History</h3>
+                        <p>Author: Ben Wilder</p>
+                        <p>Price: 1799/-</p>
+                        <button onclick="alert('Added to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-arrivals-section">
+                <h2>New Arrivals</h2>
+                <div class="books-grid">
+                    <div class="book-card">
+                        <img src="images/n11.jpg" alt="New Arrival 1" class="book-image" />
+                        <h3>Genesis: Artificial Intelligance</h3>
+                        <p>Author: Henry A. Kissinger</p>
+                        <p>Price: 1499/-</p>
+                        <button onclick="alert('Added to cart!')">Add to Cart</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/n2.jpg" alt="New Arrival 2" class="book-image" />
+                        <h3>Challenger: Disaster on the Edge of Space</h3>
+                        <p>Author: Adam Higginbotham</p>
+                        <p>Price: 1899/-</p>
+                        <button onclick="alert('Added to cart!')">Add to Cart</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/n3.jpg" alt="New Arrival 3" class="book-image" />
+                        <h3>Space Exploration</h3>
+                        <p>Author: Alex Peterson</p>
+                        <p>Price: 1299/-</p>
+                        <button onclick="alert('Added to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-section">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial-card">
+                    <p>
+                        "The College Bookstore has everything I need for my classes. The
+                        selection is fantastic!"
+                    </p>
+                    <p><strong>- Aaditya S</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <p>
+                        "I love the user-friendly interface and the fast shipping. Highly
+                        recommend!"
+                    </p>
+                    <p><strong>- Aayush </strong></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
