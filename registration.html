@@ -44,24 +44,61 @@
             <h1>Registration</h1>
             <form id="registrationForm">
                 <div class="form-group">
-                    <label for="fullName">Full Name:</label>
+                    <label for="fullName">Name:</label>
                     <input type="text" id="fullName" name="fullName" required>
-                </div>
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group dob-section">
+                    <label>Date of Birth:</label>
+                    <div>
+                        <select id="dobDay" name="dobDay" required>
+                            <option value="">Day</option>
+                            <!-- Options for days -->
+                            <script>
+                                for (let i = 1; i <= 31; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        <select id="dobMonth" name="dobMonth" required>
+                            <option value="">Month</option>
+                            <!-- Options for months -->
+                            <script>
+                                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                                months.forEach((month, index) => {
+                                    document.write(`<option value="${index + 1}">${month}</option>`);
+                                });
+                            </script>
+                        </select>
+                        <select id="dobYear" name="dobYear" required>
+                            <option value="">Year</option>
+                            <!-- Options for years -->
+                            <script>
+                                const currentYear = new Date().getFullYear();
+                                for (let i = currentYear; i >= 1900; i--) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group languages-known">
+                    <label>Languages Known:</label>
+                    <label><input type="checkbox" name="language" value="hindi"> Hindi</label>
+                    <label><input type="checkbox" name="language" value="english"> English</label>
+                    <label><input type="checkbox" name="language" value="telugu"> Telugu</label>
+                    <label><input type="checkbox" name="language" value="tamil"> Tamil</label>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
@@ -71,6 +108,7 @@
                     <button type="submit" class="register-button">Register</button>
                     <button type="reset" class="reset-button">Reset</button>
                 </div>
+                
             </form>
         </main>
     </div>

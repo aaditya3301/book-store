@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Bookstore</title>
-    <link rel="icon" href="images/hii.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/hii.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -33,39 +33,76 @@
         <aside class="left-frame">
             <h3>Departments</h3>
             <ul class="department-list">
-                <li onclick="loadContent('CSE')" class="department-item">Computer Science</li>
-                <li onclick="loadContent('ECE')" class="department-item">Electronics</li>
-                <li onclick="loadContent('EEE')" class="department-item">Electrical</li>
+                <li onclick="loadContent('CSE')" class="department-item">
+                    Computer Science
+                </li>
+                <li onclick="loadContent('ECE')" class="department-item">
+                    Electronics
+                </li>
+                <li onclick="loadContent('EEE')" class="department-item">
+                    Electrical
+                </li>
                 <li onclick="loadContent('CIVIL')" class="department-item">Civil</li>
             </ul>
         </aside>
 
         <main class="main-content" id="mainContent">
-            <h1>Checkout</h1>
-            <form id="checkoutForm">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="address">Shipping Address:</label>
-                    <textarea id="address" name="address" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="payment">Payment Method:</label>
-                    <select id="payment" name="payment" required>
-                        <option value="select">Select</option>
-                        <option value="credit-card">Credit Card</option>
-                        <option value="paypal">PayPal</option>
-                        <option value="bank-transfer">Bank Transfer</option>
-                    </select>
-                </div>
-                <button type="submit" class="checkout-button">Complete Purchase</button>
-            </form>
+            <h1>Your Cart</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Coming Wave</td>
+                        <td>899/-</td>
+                        <td>3</td>
+                        <td>2697/-</td>
+                    </tr>
+                    <tr>
+                        <td>Algorithms</td>
+                        <td>3999/-</td>
+                        <td>2</td>
+                        <td>7998/-</td>
+                    </tr>
+                    <tr>
+                        <td>Forbidden History</td>
+                        <td>1799/-</td>
+                        <td>1</td>
+                        <td>1799/-</td>
+                    </tr>
+                    <tr>
+                        <td>Genesis: Artificial Intelligence</td>
+                        <td>1499/-</td>
+                        <td>4</td>
+                        <td>5996/-</td>
+                    </tr>
+                    <tr>
+                        <td>Challenger: Disaster on the Edge of Space</td>
+                        <td>1899/-</td>
+                        <td>2</td>
+                        <td>3798/-</td>
+                    </tr>
+                    <tr>
+                        <td>Space Exploration</td>
+                        <td>1299/-</td>
+                        <td>5</td>
+                        <td>6495/-</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td colspan="3">Total Amount</td>
+                        <td>19583/-</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="checkout-button">Proceed to Checkout</button>
         </main>
     </div>
 
