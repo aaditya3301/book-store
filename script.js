@@ -203,7 +203,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
         alert(
             "Name must be at least 6 characters long and contain only alphabets."
         );
-        return; // Stop form submission
+        return;
     }
 
     if (password.length < 6) {
@@ -214,7 +214,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Updated email pattern
     if (!emailRegex.test(email)) {
         alert("Please enter a valid email address (e.g., name@domain.com).");
-        return; // Stop form submission
+        return;
     }
 
      const phoneRegex = /^\d{10}$/;
@@ -223,7 +223,6 @@ document.getElementById("registrationForm").addEventListener("submit", function 
          return; 
      }
 
-    // If all validations pass, submit the form
     alert("Registration successful!");
     this.submit();
 });

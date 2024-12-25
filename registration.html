@@ -60,7 +60,6 @@
                     <div>
                         <select id="dobDay" name="dobDay" required>
                             <option value="">Day</option>
-                            <!-- Options for days -->
                             <script>
                                 for (let i = 1; i <= 31; i++) {
                                     document.write(`<option value="${i}">${i}</option>`);
@@ -69,7 +68,7 @@
                         </select>
                         <select id="dobMonth" name="dobMonth" required>
                             <option value="">Month</option>
-                            <!-- Options for months -->
+                         
                             <script>
                                 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
                                 months.forEach((month, index) => {
@@ -79,7 +78,7 @@
                         </select>
                         <select id="dobYear" name="dobYear" required>
                             <option value="">Year</option>
-                            <!-- Options for years -->
+                          
                             <script>
                                 const currentYear = new Date().getFullYear();
                                 for (let i = currentYear; i >= 1900; i--) {
